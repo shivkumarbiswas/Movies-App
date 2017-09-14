@@ -1,0 +1,47 @@
+<!-- Story About Us
+    ================================================== -->
+<section id="nino-story">
+    <div class="container">
+        <h2 class="nino-sectionHeading">
+            <span class="nino-subHeading">Movies</span> Collection
+        </h2>
+
+        <div class="alert alert-danger" ng-show="errorMessage">
+            <strong>{{errorMessage}}</strong>
+        </div>
+        <div class="alert alert-danger" ng-show="deleteErrorMessage">
+            <strong>{{deleteErrorMessage}}</strong>
+        </div>
+
+        <span class="input-group-btn">
+                <a href="#/addMovie" class="btn btn-success" role="button">+ Add New Movie</a>
+            </span>
+
+        <table class="table table-striped" ng-hide="errorMessage">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Youtube Url</th>
+                    <th>Release Date</th>
+                    <th>IMDB Rating</th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="movie in movies">
+                    <td><strong><a href="#/viewMovie/{{movie._id}}">{{movie.name}}</strong></a></td>
+                    <td>{{movie.url}}</td>
+                    <td>{{movie.releaseDate}}</td>
+                    <td>{{movie.imdbRating}}</td>
+                    <td colspan="2">
+                        <div class="btn-group">
+                            <a type="button" class="btn btn-primary" ng-href="#/editMovie/{{movie._id}}">Edit</a>
+                            <button type="button" class="btn btn-danger" ng-click="deleteMovie(movie)">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<!--/#nino-story-->

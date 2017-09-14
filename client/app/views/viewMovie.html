@@ -1,0 +1,26 @@
+<div class="container">
+    <h2 class="nino-sectionHeading">
+        View Movie
+    </h2>
+
+    <div ng-ctrl="ViewMovieCtrl">
+        <div>
+            <span class="col-sm-2" for="name">Name:</span>
+            <span>{{movie.name}}</span>
+        </div>
+        <div>
+            <span class="col-sm-2" for="releaseDate">Release Date:</span>
+            <span>{{movie.releaseDate}}</span>
+        </div>
+        <div>
+            <span class="col-sm-2" for="imdbRating">IMDB Rating:</span>
+            <span>{{movie.imdbRating}}</span>
+        </div>
+        <div>
+            <span class="col-sm-2" for="Trailer">Trailer:</span>
+        </div>
+        <div>
+            <youtube src="movie.url"></youtube>
+        </div>
+    </div>
+</div>
